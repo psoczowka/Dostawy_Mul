@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         // toast
                         Toast toast = Toast.makeText(MainActivity.this,
                                 R.string.thank_you, Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 90 );
+                        toast.setGravity(Gravity.CENTER, 0, 50 );
                         toast.show();
 
                     }
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         // toast
                         Toast toast = Toast.makeText(MainActivity.this,
                                 R.string.thank_you, Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 90 );
+                        toast.setGravity(Gravity.CENTER, 0, 50 );
                         toast.show();
 
                     }
@@ -153,5 +153,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         SmsManager sms = SmsManager.getDefault();
         sms.sendTextMessage(phoneNumber, null, smsMessage, pi,null);
+        finish();
     }
 }
