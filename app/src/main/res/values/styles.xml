@@ -13,7 +13,7 @@
         <item name="android:layout_margin">2dp</item>
         <item name="android:color">#ffffff</item>
         <item name="android:textSize">35sp</item>
-        <item name="android:background">@drawable/shape</item>
+        <item name="android:background">@drawable/button_pressed</item>
         <item name="android:textColor">@color/black</item>
 
     </style>
