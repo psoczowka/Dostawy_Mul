@@ -5,7 +5,10 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageInstaller;
+import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.os.Message;
 import android.os.Vibrator;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -16,9 +19,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.net.PasswordAuthentication;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Properties;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -88,6 +93,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AlertDialog d = builder.create();
                 d.getWindow().setLayout(600, 400);
                 d.show();
+                // api 10 button text color
+                d.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.WHITE);
+                d.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.WHITE);
 
                 break;
 
@@ -129,6 +137,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 AlertDialog d2 = builder2.create();
                 d2.show();
+                // api 10 button text color
+                d2.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.WHITE);
+                d2.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.WHITE);
 
                 break;
         }
