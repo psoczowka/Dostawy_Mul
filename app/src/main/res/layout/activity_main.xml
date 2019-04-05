@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity"
+    android:padding="20dp">
+
+    <Button
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/sobieski_mu"
+        android:id="@+id/sobieski_button"
+        style="@style/buttons_mul" />
+
+    <ImageView
+        android:layout_width="334dp"
+        android:layout_height="452dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/coal"
+        android:contentDescription="cargo_cart"/>
+
+    <Button
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/janina_mu"
+        android:id="@+id/janina_button"
+        style="@style/buttons_mul"
+        android:layout_marginBottom="100dp"/>
+
+</RelativeLayout>
