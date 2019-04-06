@@ -61,11 +61,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 // Confirmation popup
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
-                builder.setPositiveButton("Tak", new DialogInterface.OnClickListener()
-                {
+                builder.setPositiveButton("Tak", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which)
-                    {
+                    public void onClick(DialogInterface dialog, int which) {
                         // Stuff to do
                         sendSms();
                         // play sound
@@ -73,18 +71,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         // toast
                         Toast toast = Toast.makeText(MainActivity.this,
                                 R.string.thank_you, Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 50 );
+                        toast.setGravity(Gravity.CENTER, 0, 50);
                         toast.show();
 
                     }
                 });
-                builder.setNegativeButton("Nie", new DialogInterface.OnClickListener()
-                {
+                builder.setNegativeButton("Nie", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which)
-                    {
+                    public void onClick(DialogInterface dialog, int which) {
                         // Stuff to do
-                        vibe.vibrate(100);
+                        if (vibe != null) {
+                            vibe.vibrate(100);
+                        }
                     }
                 });
 
@@ -92,7 +90,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 builder.setTitle(R.string.sobieski_mu);
 
                 AlertDialog d = builder.create();
-                d.getWindow().setLayout(600, 400);
                 d.show();
                 // api 10 button text color
                 d.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.WHITE);
@@ -106,11 +103,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 // Confirmation popup
                 AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
-                builder2.setPositiveButton("Tak", new DialogInterface.OnClickListener()
-                {
+                builder2.setPositiveButton("Tak", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which)
-                    {
+                    public void onClick(DialogInterface dialog, int which) {
                         // Stuff to do
                         sendSms();
                         // play sound
@@ -118,18 +113,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         // toast
                         Toast toast = Toast.makeText(MainActivity.this,
                                 R.string.thank_you, Toast.LENGTH_LONG);
-                        toast.setGravity(Gravity.CENTER, 0, 50 );
+                        toast.setGravity(Gravity.CENTER, 0, 50);
                         toast.show();
 
                     }
                 });
-                builder2.setNegativeButton("Nie", new DialogInterface.OnClickListener()
-                {
+                builder2.setNegativeButton("Nie", new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialog, int which)
-                    {
+                    public void onClick(DialogInterface dialog, int which) {
                         // Stuff to do
-                        vibe.vibrate(100);
+                        if (vibe != null) {
+                            vibe.vibrate(100);
+                        }
                     }
                 });
 
@@ -148,11 +143,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void sendSms() {
 
-        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-        PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intent,0);
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0, intent, 0);
 
         SmsManager sms = SmsManager.getDefault();
-        sms.sendTextMessage(phoneNumber, null, smsMessage, pi,null);
+        sms.sendTextMessage(phoneNumber, null, smsMessage, pi, null);
         finish();
     }
 }
