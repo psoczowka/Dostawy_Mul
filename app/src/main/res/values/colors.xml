@@ -7,4 +7,7 @@
     <color name="gradientSecondary">#BDBDBD</color>
     <color name="gradient">#EEEEEE</color>
     <color name="white">#ffffff</color>
+    <color name="gradient_pressed_2">#FFB14F</color>
+    <color name="gradient_pressed">#FFD15F</color>
+    <color name="red_dialog">#ff0202</color>
 </resources>

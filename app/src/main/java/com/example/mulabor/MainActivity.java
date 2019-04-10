@@ -1,5 +1,6 @@
 package com.example.mulabor;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String date = df.format(Calendar.getInstance().getTime());
 
         final Vibrator vibe = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.sms_alert);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.definite);
 
         switch (v.getId()) {
             case R.id.sobieski_button:
@@ -92,8 +93,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AlertDialog d = builder.create();
                 d.show();
                 // api 10 button text color
-                d.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.WHITE);
-                d.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.WHITE);
+                d.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.RED);
+                d.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.GREEN);
 
                 break;
 
@@ -134,8 +135,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 AlertDialog d2 = builder2.create();
                 d2.show();
                 // api 10 button text color
-                d2.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.WHITE);
-                d2.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.WHITE);
+                d2.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.RED);
+                d2.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.GREEN);
 
                 break;
         }
