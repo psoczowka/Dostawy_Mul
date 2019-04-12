@@ -30,7 +30,7 @@ import java.util.Properties;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private String smsMessage = "";
-    private String phoneNumber = "516116105";
+    private String phoneNumber = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
